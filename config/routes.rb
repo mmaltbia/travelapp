@@ -10,7 +10,11 @@ get "/login", to: "sessions#new"
 get "/logout", to: "sessions#destroy"
 post "/sessions", to: "sessions#create"
 
+# posts routes
+resources :posts, except: [:index]
+
 root 'posts#index'
+
 end
 
 #          Prefix Verb URI Pattern                Controller#Action
