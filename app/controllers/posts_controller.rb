@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
     if current_user.posts.include? @post
-    render :edit
+      render :edit
     else
       # redirect_to '/profile'
       redirect_to profile_path
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if current_user.posts.include? @post
-    post.update_attributes(post_params)
+      post.update_attributes(post_params)
     else
       redirect_to profile_path
     end
@@ -49,6 +49,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    parms.require(:post).permit(:author, :title, :body)
+    params.require(:post).permit(:author, :title, :body)
   end
 end
