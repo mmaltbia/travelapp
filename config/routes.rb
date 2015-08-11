@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'cities/show'
+
+  get 'cities/index'
+
+resources :cities, only: [:show]
+
 #user routes
 get '/signup', to: 'users#new'
 get '/profile', to: 'users#show'
