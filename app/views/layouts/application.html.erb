@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>TravelApp</title>
- <%= stylesheet_link_tag :application, media: :all %>
- 
- <!-- bootstrap css -->
- <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
- <%= csrf_meta_tags %>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
  	<% if current_user.present? %>
@@ -67,11 +65,28 @@
 	<%= render 'users/login' %>
 	<%= render 'users/new' %>
 
+	<div id="sidebar">
+		<div id="logo">
+		<%= link_to root_path do %>
+		<%= image_tag "sun.png" %>
+		<% end %>
+	</div>
+	<ul>
+		<li class="category">Website</li>
+		<li><%= link_to "TravelApp", root_path %></li>
+	</ul>
+	</div>
+	<div id="main_content">
+	<%= yield %>
+	</div>
+
    <%= yield %>
 
  <%= javascript_include_tag :application %>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
 
  
