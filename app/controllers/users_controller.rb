@@ -1,20 +1,29 @@
 class UsersController < ApplicationController
+  
   # form to create new user
   def new
-  	@user = User.new
-  	render :new
+    if current_user
+      redirect_to '/profile'
+    else
+      @user = User.new
+      render :new
+    end
   end
 
   # creates new user in db
   def create
-  	user = User.new(user_params)
-  	if user.save
-  		session[:user_id] = user.id
-  		redirect_to profile_path
-  	else
-  		redirect_to signup_path
-	  end
-	end
+    if current_user
+      redirect_to profile_path
+    else
+    user = User.new(user_params)
+      if user.save
+        session[:user_id] = user.id
+        redirect_to '/profile'
+      else
+        redirect_to '/signup'
+      end 
+    end
+  end
 
   # show current user 
   def show

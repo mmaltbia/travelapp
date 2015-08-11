@@ -1,0 +1,27 @@
+body {
+  font-family: Roboto;
+  background: url('background.jpg'); 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+button.btn.btn-primary.btn-lg {
+	color: #706F6F;
+	background-color: rgba(0, 0, 0, 0.0);
+	border: none;
+}	
+
+#page_wrapper {
+		padding: 3em;
+		#profile_image {
+			width: 300px;
+			float: left;
+			margin-right: 2em;
+			img {
+				width: 100%;
+				border-radius: 0.35em;
+			}
+		}
+	}
