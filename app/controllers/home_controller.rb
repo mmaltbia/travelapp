@@ -4,9 +4,6 @@ class HomeController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
-=======
   	render :show
->>>>>>> travel-branch
   end
 end
