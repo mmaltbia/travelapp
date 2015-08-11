@@ -8,7 +8,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="form-group">
-					<%= form_for @user do |f| %>
+					<%= form_for :user, url: '/users' do |f| %>
 					    <%= f.text_field :first_name, placeholder: "First Name" %>
 					    <%= f.text_field :last_name, placeholder: "Last Name" %>
 					    <%= f.email_field :email, placeholder: "Email" %>

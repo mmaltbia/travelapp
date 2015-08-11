@@ -13,7 +13,7 @@ post "/sessions", to: "sessions#create"
 # posts routes
 resources :posts
 
-root 'posts#index'
+root 'home#index'
 
 end
 
