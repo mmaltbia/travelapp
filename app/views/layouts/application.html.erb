@@ -9,7 +9,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< HEAD
  	<% if current_user.present? %>
+=======
+	<% if current_user.present? %>
+>>>>>>> travel-branch
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,6 +66,7 @@
 		</nav>
 
 	<% end %>
+<<<<<<< HEAD
 	
 	<%= render 'users/login' %>
 	<%= render 'users/new' %>
@@ -69,12 +74,27 @@
 	
 
    <%= yield %>
+=======
+
+   <%= yield %>
+
+<div id="main_content">
+<%= yield %>
+</div>
+	
+<%= render 'users/login' %>
+<%= render 'users/new' %>
+
+>>>>>>> travel-branch
 
  <%= javascript_include_tag :application %>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
+<<<<<<< HEAD
 
 
 
  
+=======
+>>>>>>> travel-branch

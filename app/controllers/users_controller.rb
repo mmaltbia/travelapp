@@ -3,7 +3,11 @@ class UsersController < ApplicationController
   # form to create new user
   def new
     if current_user
+<<<<<<< HEAD
       redirect_to '/profile'
+=======
+      redirect_to profile_path
+>>>>>>> travel-branch
     else
       @user = User.new
       render :new

@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
+=======
+  get 'cities/show'
+
+  get 'cities/index'
+
+resources :cities, only: [:show]
+
+>>>>>>> travel-branch
 #user routes
 get '/signup', to: 'users#new'
 get '/profile', to: 'users#show'
