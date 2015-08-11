@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
- 	<% if current_user.present? %>
+	<% if current_user.present? %>
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,23 +44,6 @@
 		      </button>
 		      <a class="navbar-brand logo" href="/">Vagabond</a>
 		    </div>
-
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav navbar-right">
-		      	<!-- Button trigger sign up modal -->
-		      	<button role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">
-		      	  Sign Up
-		      	</button>
-		      	<!-- Button trigger login modal -->
-		      	<button role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">
-		      	  Login
-		      	</button>
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
-
 	<% end %>
 	
 	<%= render 'users/login' %>
@@ -71,5 +54,6 @@
 	
  	<%= javascript_include_tag :application %>
  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	</body>
+
+</body>
 </html>
