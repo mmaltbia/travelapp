@@ -17,7 +17,7 @@ get "/logout", to: "sessions#destroy"
 post "/sessions", to: "sessions#create"
 
 # posts routes
-resources :posts, except: [:index]
+resources :posts
 
 root 'posts#index'
 
