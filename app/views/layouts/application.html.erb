@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>TravelApp</title>
- <%= stylesheet_link_tag :application, media: :all %>
- 
- <!-- bootstrap css -->
- <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
- <%= csrf_meta_tags %>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
- <div class="container">
- <div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
+	<% if current_user.present? %>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand logo" href="/">Vagabond</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/logout">Log Out</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	<% else %>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand logo" href="/">Vagabond</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		      	<!-- Button trigger sign up modal -->
+		      	<button role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">
+		      	  Sign Up
+		      	</button>
+		      	<!-- Button trigger login modal -->
+		      	<button role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">
+		      	  Login
+		      	</button>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+	<% end %>
+
    <%= yield %>
- </div>
+
+<div id="main_content">
+<%= yield %>
+</div>
+	
+<%= render 'users/login' %>
+<%= render 'users/new' %>
+
 
  <%= javascript_include_tag :application %>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-{ name: 'Dallas', longitude: '-96.796988', latitude: '32.776664', image: 'http://www.texasenterprise.utexas.edu/sites/texasenterprise.utexas.edu/files/imagecache/100square/Dallas_400W_LR.jpeg'},{ name: 'San Jose', longitude: '-121.886329', latitude: '37.338208', image: 'https://www.sanjoseca.gov/%5Cimages%5CCivicAlerts%5C44%5CThumbNails%5CSalt%20Ponds%20and%20RWF%20v2_100x100_thumb.jpg'},{ name: 'Boulder', longitude: '-105.270546', latitude: '40.014986', image: 'http://goldensolar.net/wp-content/uploads/2014/10/boulder-colorado-is-attempting-to-establish-its-own-municipal-energy_16001083_24834_1_14080537_500-100x100.jpg'},{ name: 'Oakland', longitude: '-122.271114', latitude: '37.804364', image: 'https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCP0GkdHghNfr3Q&w=100&h=100&url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FOAKLAND%252C_CA%252C_USA_-_Skyline_and_Bridge.JPG%2F720px-OAKLAND%252C_CA%252C_USA_-_Skyline_and_Bridge.JPG&cfs=1&f&fallback=hub_city'},{ name: 'Las Vegas', longitude: '-115.139830', latitude: '36.169941', image:'http://estherdelurgio.smugmug.com/Photography/Las-Vegas-Nevada/i-tC7MNmK/0/Ti/Las%20Vegas%20at%20night-Ti.jpg'},{ name: 'Denver', longitude: '-104.990251', latitude: '39.739236', image: 'http://www.denverdigitalphotography.com/Portfolio/Denver/i-4GhZBzg/3/Ti/OctoberMorning005%20copy%20copy-Ti.jpg'},{ name: 'Nashville', longitude: '-86.781602', latitude: '36.162664', image:'http://media.bizj.us/view/img/710911/austinskyline*100xx1316-1316-611-0.jpg'},{ name: 'Minneapolis', longitude: '-93.265011', latitude: '44.977753', image:'http://i.forbesimg.com/media/lists/places/minneapolis-st-paul-mn_100x100.jpg'},{ name: 'Releigh', longitude: '-78.638179', latitude: '35.779590', image:'http://www.janicerosenberg.com/portals/janicerosenberg/Raleigh.png'},{ name: 'Baltimore', longitude: '-76.612189', latitude: '39.290385', image:'http://www.propertymanagementinsider.com/wp-content/uploads/Baltimore-Inner-Harbor_featured1-100x100.jpg'},{ name: 'Charlotte', longitude: '-80.843127', latitude: '35.227087', image:'http://www.biddingtraveler.com/images/hotela/4bff.jpg'},{ name: 'Pittsburgh', longitude: '-79.995886', latitude: '40.440625', image:'http://www.propertymanagementinsider.com/wp-content/uploads/pittsburgh-the-point_featured11-100x100.jpg'},{ name: 'St. Louis', longitude: '-90.199404', latitude: '38.627003', image:'http://www.adg-stl.com/wp-content/gallery/comprehensive-energy-master-plan-for-the-city-of-st-louis/thumbs/thumbs_173712964okgukt_fs.jpg'},{ name: 'Phoenix', longitude: '-112.074037', latitude: '33.448377', image:'http://d1snss4y4kpfjl.cloudfront.net/unsafe/100x100/smart/11443_original_Phoenix_City_Highlights_-_Half_Day_Tour_1388029557.jpg'},{ name: 'Cleveland', longitude: '-81.694361', latitude: '41.499320', image:'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRc6xLKHQSqohqZ775SJxTXkfiuBuUjjEvRdHzNvbRuSv5lcPC2'},{ name: 'Kansas City', longitude: '-94.578567', latitude: '39.099727', image:'http://pl.practicelink.com/products/wp-content/uploads/2014/12/cleveland1.png'},{ name: 'Orlando', longitude: '-81.379236', latitude: '28.538335', image:'http://soccerstadiumdigest.com/wp-content/uploads/2015/07/new_orlando_july31_1-100x100.jpg'},{ name: 'Salt Lake City', longitude: '-111.891047', latitude: '40.760779', image:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQfKgz0en_YmpBdZUWIS1Q201rZcQhks8b2Crj2aaoI8Ho5SDzY'}])
-
- 
