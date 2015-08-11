@@ -33,8 +33,8 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
-    if current_user.posts.include? @post
+    post = Post.find(params[:id])
+    if current_user.posts.include? post
       post.update_attributes(post_params)
     else
       redirect_to profile_path
