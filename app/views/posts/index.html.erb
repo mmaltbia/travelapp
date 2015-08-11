@@ -6,3 +6,9 @@
 		<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
 	</div>
 <% end %>
+
+<% @cities.each do |city| %>
+	<div class="city_wrapper">
+		<h2 class="name"><%= city.name %></h2>
+	</div>
+<% end %>
