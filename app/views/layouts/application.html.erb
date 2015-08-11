@@ -62,20 +62,14 @@
 		</nav>
 
 	<% end %>
-
-<div id="main_content">
-<%= yield %>
-</div>
 	
-<%= render 'users/login' %>
-<%= render 'users/new' %>
+	<%= render 'users/login' %>
+	<%= render 'users/new' %>
 
-
- <%= javascript_include_tag :application %>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
+	
+ 	  <%= yield %>
+	
+ 	<%= javascript_include_tag :application %>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
 </html>
-
-
-
- 
