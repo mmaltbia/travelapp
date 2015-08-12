@@ -15,7 +15,7 @@
 		  <div class="row animated fadeIn fade">
 		  	<% @city.each do |city| %>
 		  		<div class="col-sm-4">
-		  			<h4 class="name"><%= link_to city.name %></h4>
+		  			<h4 class="name"><%= link_to city.name, city_path(city) %></h4>
 		  			<img src="<%= city.image %>">
 		  		</div>
 		  	<% end %>
