@@ -1,7 +1,13 @@
-<% @cities.each do |city| %>
-	<div class="city_wrapper">
-		<h2 class="name"><%= city.name %></h2>
-		<img src="<%= city.image %>" alt="">
-	</div>
+<body class="city">
+	<div id="background" class="container-fluid">
+		<div class="col-sm-6 text-center col-sm-offset-3">
+			<% @cities.each do |city| %>
+				<div class="city_wrapper">
+					<h2 class="name"><%= city.name %></h2>
+					<img src="<%= city.image %>" alt="">
+				</div>
 
-<% end %>
+			<% end %>
+		</div>
+	</di>
+</body>
