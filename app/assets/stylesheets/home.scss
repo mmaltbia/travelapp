@@ -1,10 +1,13 @@
 body {
   font-family: 'Quicksand', sans-serif;
-  background: url('background.jpg'); 
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
+}
+
+body.home {
+	background: url('background.jpg') no-repeat 50% 50% fixed; 
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
 }
 
 #background > div > div > span > button {

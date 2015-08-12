@@ -1,10 +1,13 @@
+<body class="home">
 <div id="background" class="container-fluid">
 	<div class="col-sm-6 text-center col-sm-offset-3">
-	    <div class="input-group">
-	      <input type="text" class="form-control" placeholder="Search for...">
-	      <span class="input-group-btn">
-	        <button class="btn btn-default" type="button">Go!</button>
-	      </span>
-	    </div>
+	    <%= form_tag search_cities_path, method: :get, class: "input-group", role: "search" do %>
+	    		<%= text_field_tag :search, params[:search], placeholder: "Where Are You Headed?", class:"form-control" %>
+	    		<span class="input-group-btn">
+	    		<%= submit_tag "Go!", name: nil, class: "btn btn-default" %>
+				</span>
+	    <% end %>
+
 	  </div>
 </div>
+</body>
