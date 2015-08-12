@@ -2,12 +2,28 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
+.h4 {
+	font-size: 20px;
+}
+
 body.home {
 	background: url('background.jpg') no-repeat 50% 50% fixed; 
 	background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	-webkit-background-size: cover;
+}
+
+#go-somewhere {
+	color: #fff;
+	font-size: 100px;
+	margin-top: 0.5em;
+	font-family: 'Kalam';
+	text-shadow: 2px 2px rgba(97, 97, 97, 0.41);
 }
 
 #background > div > div > span > button {
@@ -25,6 +41,32 @@ button.btn.btn-primary.btn-lg {
 	background-color: rgba(0, 0, 0, 0.0);
 	border: none;
 }	
+#city_search {
+	margin-top: 2em;
+}
+
+#search {
+	background-color: rgba(255, 255, 255, 0.9);
+	border: none;
+	height: 52px;
+	font-size: 22px;
+}
+
+#city_search > span > input {
+	background-color: #ED1C24;
+	border: none;
+	color: #fff;
+	padding-top: 7px;
+    padding-bottom: 7px;
+    height: 52px;
+}
+
+#background > div.col-sm-8.text-center.col-sm-offset-2 > div {
+	background-color: rgba(255, 255, 255, 0.9);
+	margin-top: 8em;
+	padding-bottom: 5em;
+	margin-bottom: 5em;
+}
 
 #page_wrapper {
 		padding: 3em;

@@ -9,6 +9,7 @@ resources :cities, only: [:show]
 resources :cities do 
 	collection do
 		get 'search'
+		get :autocomplete
 	end
 end
 
