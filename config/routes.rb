@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'cities/show'
-
-  get 'cities/index'
+#cities routes
+get 'cities/show', to: 'cites#show'
+get 'cities/index', to: 'cities#index'
 
 resources :cities, only: [:show]
+
+resources :cities do 
+	collection do
+		get 'search'
+		get :autocomplete
+	end
+end
 
 #user routes
 get '/signup', to: 'users#new'
