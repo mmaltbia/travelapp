@@ -1,8 +1,8 @@
 <body class="home">
 <div id="background" class="container-fluid">
 	<div class="col-sm-6 text-center col-sm-offset-3">
-		<p id="go-somewhere">Go.</p>
-	    <%= form_tag search_cities_path, method: :get, class: "input-group", id: "city_search", autocomplete: "on", role: "search" do %>
+		<p class="animated fadeInDown" id="go-somewhere">Go.</p>
+	    <%= form_tag search_cities_path, method: :get, class: "input-group animated fadeIn fade", id: "city_search", autocomplete: "on", role: "search" do %>
 	    		<%= text_field_tag :search, params[:search], placeholder: "Where Are You Headed?", class:"form-control" %>
 	    		<span class="input-group-btn">
 	    		<%= submit_tag "Go!", name: nil, class: "btn btn-default" %>
@@ -12,7 +12,7 @@
 	  </div>
 
 	  <div class="col-sm-8 text-center col-sm-offset-2">
-		  <div class="row">
+		  <div class="row animated fadeIn fade">
 		  	<% @city.each do |city| %>
 		  		<div class="col-sm-4">
 		  			<h4 class="name"><%= link_to city.name %></h4>
