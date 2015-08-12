@@ -1,6 +1,6 @@
-<% @cities.each do |city| %>
-	<div class="city_wrapper">
+<% @city.each do |city| %>
+	<div class="post_wrapper">
 		<h2 class="name"><%= city.name %></h2>
+		<img src="<%= city.image %>"></p>
 	</div>
-	<img src="<%= city.image %>"> 
 <% end %>

@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Blog</title>
-  <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Kalam:700|Quicksand:400,700,300' rel='stylesheet' type='text/css'>
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
  	<% if current_user.present? %>
@@ -68,9 +68,17 @@
 <div id="main_content">
 <%= yield %>
 </div>
+<<<<<<< HEAD
 
 >>>>>>> 228f6a6a49cd25ec3d09664e2753f70e728dd0b9
  <%= javascript_include_tag :application %>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+=======
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
+	<%= javascript_include_tag :application %>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script> -->
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 	
+>>>>>>> 052bf50b7dfc05aebff02969996f336adf5baeb6
 </body>
 </html>
