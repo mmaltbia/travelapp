@@ -7,13 +7,6 @@ resources :cities do
 	end
 end
 
-#cities routes
-get 'cities/show', to: 'cites#show'
-get 'cities/index', to: 'cities#index'
-get 'cities/:id', to: 'cities#show'
-
-resources :cities, only: [:show]
-
 #user routes
 get '/signup', to: 'users#new'
 get '/profile', to: 'users#show'

@@ -1,5 +1,5 @@
 c = City.create([
-	{ name: 'San Francisco', longitude: '-122.419416', latitude: '37.774929', image: 'https://gaytravel-destinations.s3.amazonaws.com/32384/golden-gate-bridge__small.jpg'},
+	{ name: 'San Francisco', longitude: '-122.419416', latitude: '37.774929', image: 'https://gaytravel-destinations.s3.amazonaws.com/32384/golden-gate-bridge__small.jpg', banner_image: 'http://news.theregistrysf.com/wp-content/uploads/2015/06/san_francisco.jpg', bg_img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTbOrNYQCXZJDi10OgtmnP_Sr54bNq7NkyQq-5UbtVDKOy13DxkCw'},
 	{ name: 'New York City', longitude: '-74.005941', latitude: '40.712784', image: 'https://radar-risk.com/wp-content/uploads/2015/02/New-York-City3-100x100.png'},
 	{ name: 'Chicago', longitude: '-87.629798', latitude: '41.878114', image: 'http://media1.shmoop.com/media/covers/poetry/chicago-sandburg.jpg'},
 	{ name: 'Los Angeles', longitude: '-118.243685', latitude: '34.052234', image: 'http://www.ctbuh.org/Portals/0/DigArticle/452/LosAngeles100.jpg'},

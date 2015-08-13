@@ -5,7 +5,8 @@ class CreateCities < ActiveRecord::Migration
       t.string :longitude
       t.string :latitude
       t.string :image
-
+      t.string :bg_img
+      t.string :banner_image
       t.timestamps null: false
     end
   end

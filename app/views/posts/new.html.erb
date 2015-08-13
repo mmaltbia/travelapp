@@ -6,6 +6,7 @@
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			    <h3 class="panel-title"><%= f.text_field :title, placeholder: "title" %></h3>
+			    <%= f.collection_select(:city_id, City.all, :id, :name ) %>
 			  </div>
 			  <div class="panel-body">
 			  	<%= f.text_field :author, placeholder: "author" %><br>

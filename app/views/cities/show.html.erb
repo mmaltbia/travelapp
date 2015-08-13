@@ -1,13 +1,21 @@
-<body class="city">
-	<div id="background" class="container-fluid">
+<div class="city">
+	<img id="bg-img" src="<%= @city.bg_img %>" alt="<%= @city.name %> Background Image">
+	<div id="main" class="container-fluid">
 		<div class="col-sm-10 col-sm-offset-1 main">
 			<div class="row">
 				<h4 class="name col-sm-10"><%= link_to @city.name %></h4>
-					<button role="button" class="col-sm-2 text-right btn btn-primary btn-lg red-btn" data-toggle="modal" data-target="#newPostModal">Create New Post</button>
+				<button role="button" class="col-sm-2 text-right btn btn-primary btn-lg red-btn" data-toggle="modal" data-target="#newPostModal">Create New Post</button>
 			</div>
-				<img src="<%= @city.image %>">
+			<img class="col-sm-12 banner-image" src="<%= @city.banner_image %>">
+			<div class="cities-posts col-sm-12">
+				<%= @post.each do |post| %>
+					<h1><%= post.title %></h1>
+					<h4><%= post.author %></h4>
+					<p><%= post.body %></p>
+				<% end %>
+			</div>
 			</div>
 		</div>
 	</di>
-</body>
+</div>
 

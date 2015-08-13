@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+ 
  #authorizes pages except index and show pages
  before_filter :authorize, except: [:index, :show] 
   def index
@@ -50,6 +51,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:author, :title, :body)
+    params.require(:post).permit(:author, :title, :body, :name, :city_id)
   end
 end
