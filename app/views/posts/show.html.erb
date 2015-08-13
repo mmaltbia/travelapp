@@ -1,14 +1,19 @@
-<div id="post_content">
-	<h1 class="title"><%= @post.title %></h1>
-	<h3 class="author"><%= @post.author %></h3>
-	<p class="date">
-		Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-		<% if current_user && current_user.posts.include?(@post) %>
-			| <%= link_to 'Edit', edit_post_path(@post) %> |
-			  <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
-		 <% end %>
-	</p>
-	<p class="body">
-		<%= @post.body %>
-	</p>
+<body class="posts">
+<div id="background2" class="container-fluid">
+	<div class="col-sm-8 text-center col-sm-offset-2">
+		<div class="row animated fadeIn fade">
+			<h4 id="city-name1"></h4><br>
+			<img id="profile-image2" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/08b/0a4/1e476e9.jpg" alt="Daniel Kahn">
+			<div id="post_content">
+				<h2 class="title" id="titleId">Sunny California</h2>
+				<h3 class="author">Michelle M.</h3>
+				<p class="date">
+					Submitted about 20 hours Ago
+				</p>
+				<p class="body">
+					California, a western U.S. state, stretches from the Mexican border along the Pacific for nearly 900 miles. It&#39;s known for its dramatic terrain encompassing cliff-lined beaches, redwood forest, the Sierra Nevada Mountains, Central Valley farmland and the arid Mojave Desert. Its cities include sprawling Los Angeles, seat of the Hollywood entertainment industry, and hilly San Francisco, home to the Golden Gate Bridge.
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
