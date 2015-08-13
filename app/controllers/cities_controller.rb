@@ -14,11 +14,13 @@ class CitiesController < ApplicationController
 		end
 	end	
 
-	  def index
-	  	@cities = City.all
-	  	render :index
-	  end
 
+  def index
+  	@cities = City.all
+  	render :index
+  end
+
+<<<<<<< HEAD
 	  def show
 	  	city_id = params[:id]
 	  	@city = City.find_by(id: city_id)

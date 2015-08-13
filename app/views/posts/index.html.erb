@@ -1,9 +1,21 @@
-<% @posts.each do |post| %>
-	<div class="post_wrapper">
-		<h2 class="title"><%= link_to post.title, post %></h2>
-		<h4 class="author"><%= post.author %></h4>
-		<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-		<h4 class="body"><%= post.body %></h4>
-	</div>
-<% end %>
 
+
+<% @posts.each do |post| %>
+
+<body class="posts">
+<div id="background2" class="container-fluid">
+	<div class="col-sm-8 text-center col-sm-offset-2">
+		<div class="row animated fadeIn fade">
+			<h4 id="city-name1"></h4><br>
+			<img id="profile-image2" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/08b/0a4/1e476e9.jpg" alt="Daniel Kahn">
+						<div id="post_content">
+							<h2 class="title" id="titleId"><%= link_to post.title, post %></h2>
+							<h4 class="author"><%= post.author %></h4>
+							<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+							<h4 class="body"><%= post.body %></h4>
+						</div>
+			</div>
+		</div>
+	</div>
+</body>
+<% end %>

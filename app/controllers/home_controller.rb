@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   	@city = City.first(6)
   	render :index
   end
-
   def show
   	@city = City.all
   	render :show
