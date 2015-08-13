@@ -1,3 +1,4 @@
+
 <body class="city">
 	<div id="background" class="container-fluid">
 		<div class="col-sm-6 text-center col-sm-offset-3">
@@ -11,3 +12,19 @@
 		</div>
 	</di>
 </body>
+
+
+<% @cities.each do |city| %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="city_wrapper">
+				<h2 class="name"><%= city.name %></h2>
+				<img src="<%= city.image %>" alt="">
+			</div>
+				<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=&markers=#{city.latitude}%2C#{city.longitude}", id: "apiTag" %>
+		</div>
+	</div>
+</div>
+<% end %>
+

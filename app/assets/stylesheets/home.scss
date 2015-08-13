@@ -3,31 +3,31 @@ body {
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .h4 {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 body.home {
-	background: url('background.jpg') no-repeat 50% 50% fixed; 
-	background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
+  background: url('background.jpg') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 #go-somewhere {
-	color: #fff;
-	font-size: 100px;
-	margin-top: 0.5em;
-	font-family: 'Kalam';
-	text-shadow: 2px 2px rgba(97, 97, 97, 0.41);
+  color: #fff;
+  font-size: 100px;
+  margin-top: 0.5em;
+  font-family: 'Kalam';
+  text-shadow: 2px 2px rgba(97, 97, 97, 0.41);
 }
 
 #background > div > div > span > button {
-	background-color: #ED1C24;
+  background-color: #ED1C24;
     border: none;
     color: #fff;
     border-radius: 8px;
@@ -37,38 +37,38 @@ body.home {
 }
 
 button.btn.btn-primary.btn-lg {
-	color: #706F6F;
-	background-color: rgba(0, 0, 0, 0.0);
-	border: none;
-}	
+  color: #706F6F;
+  background-color: rgba(0, 0, 0, 0.0);
+  border: none;
+} 
 #city_search {
-	margin-top: 2em;
+  margin-top: 2em;
 }
 
 #search {
-	background-color: rgba(255, 255, 255, 0.9);
-	border: none;
-	height: 52px;
-	font-size: 22px;
-	border-radius: 3px 0 0 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  height: 52px;
+  font-size: 22px;
+  border-radius: 3px 0 0 3px;
 }
 
 #city_search > span > input {
-	background-color: #ED1C24;
-	border: none;
-	color: #fff;
-	padding-top: 7px;
+  background-color: #ED1C24;
+  border: none;
+  color: #fff;
+  padding-top: 7px;
     padding-bottom: 7px;
     height: 52px;
 }
 
 /* Browse cities Div */
 #background > div.col-sm-8.text-center.col-sm-offset-2 > div {
-	background-color: rgba(255, 255, 255, 0.9);
-	margin-top: 8em;
-	padding-bottom: 5em;
-	margin-bottom: 5em;
-	border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 8em;
+  padding-bottom: 5em;
+  margin-bottom: 5em;
+  border-radius: 3px;
 }
 
 .fade {
@@ -235,14 +235,14 @@ button.btn.btn-primary.btn-lg {
 }
 
 #page_wrapper {
-		padding: 3em;
-		#profile_image {
-			width: 300px;
-			float: left;
-			margin-right: 2em;
-			img {
-				width: 100%;
-				border-radius: 0.35em;
-			}
-		}
-	}
+    padding: 3em;
+    #profile_image {
+      width: 300px;
+      float: left;
+      margin-right: 2em;
+      img {
+        width: 100%;
+        border-radius: 0.35em;
+      }
+    }
+  }

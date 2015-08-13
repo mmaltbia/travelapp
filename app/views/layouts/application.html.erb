@@ -9,7 +9,7 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
- 	<nav id="nav" class="navbar navbar-default">
+		<nav id="nav" class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -24,6 +24,7 @@
 		    		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
+
 		      	<% if @current_user %> 
                    <span class="nav"><%= link_to "Hi  " + @current_user.first_name.capitalize + "!", '/profile' %>  
                    <%= link_to "Log out", logout_path %></span>
@@ -36,7 +37,6 @@
 				      	</button>
                     <% end %> 
 
-		      	<!-- Button trigger sign up modal -->
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -46,9 +46,8 @@
 <div id="main_content">
 <%= yield %>
 </div>
-	<%= javascript_include_tag :application %>
+<%= javascript_include_tag :application %>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script> -->
  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
- 	
 </body>
 </html>
