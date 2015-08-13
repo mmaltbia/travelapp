@@ -21,7 +21,7 @@ class CitiesController < ApplicationController
 
 	  def show
 	  	city_id = params[:id]
-	  	@city = City.find_by(id: params[:id])
+	  	@city = City.find_by(id: city_id)
 	  	@post = Post.where(city_id: city_id)
 	  	render :show
 	  end

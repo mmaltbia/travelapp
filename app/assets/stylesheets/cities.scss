@@ -3,7 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.city > #bg-img {
-	height: 100%;
+	zoom: 50;  //increase if you have very small images
+    display: block;
+    margin: auto;
+    height: auto;
+    max-height: 500%;
+    width: auto;
+    max-width: 500%;
 	z-index: 0;
 	position: absolute;
 }
@@ -13,6 +19,9 @@ div.city > #bg-img {
 	padding-right: 25px;
 	z-index:2;
 	position: absolute;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 2em;
 }
 
 #main > div > div > h4 > a {
@@ -25,8 +34,20 @@ div.city > #bg-img {
 	color: #fff;
 	text-shadow: 1px 1px #5A1D1D;
 	margin-top: .5em;
+	width: 182px;
+    left: 19em;
+    border-bottom-width: 9px;
+    margin-bottom: 9px;
 }
 
 .banner-image{
-	max-height: 400px;
+	zoom: 2;  //increase if you have very small images
+    display: block;
+    margin: auto;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
