@@ -1,60 +1,26 @@
-<% @city.each do |city| %>
-	<div class="post_wrapper">
-		<h2 class="name"><%= city.name %></h2>
-		<img src="<%= city.image %>"></p>
-	</div>
-<% end %>
-
-
-<div class="col-sm-8 col-sm-offset-2">
-
-	<h1><%= @city.city_name %></h1>
-
-	<h4><%= @city.city_description %><h4>
-
-</div>
-
-
-<div class="col-sm-8 col-sm-offset-2">
-
-	<h3>Welcome to <%= @city.city_name %>! What are your thoughts?</h3>
-
-	<form action="/posts" method="post">
-
-	    <% flash.each do |name, msg| %>
-	      <%= content_tag :div, msg, class: name %>
-	    <% end %>
-
-	    <%= form_for :post do |f| %>
-	      <%= f.text_field :title, placeholder: "Title", autofocus: true, class: "form-control" %> <br />
-	      <%= f.text_area :content, placeholder: "Content", class: "form-control", size: "24x6" %><br />
-	      <%= f.hidden_field :city_id, value: params[:id] %>
-	      <%= f.submit "Post", class: "btn btn-info" %>
-	    <% end %>
-
-	</form>
-
-	<% @posts.each do |p| %>
-	
-	<h3>  <%= p.title %> </h3>
-	  <%= p.user.username %><br />
-	  <%= p.content %><br />
-
-	<% end %>
-
-	
-</div>
-
-<body class="city">
+<div class="city">
+	<img id="bg-img" src="<%= @city.banner_image %>" alt="<%= @city.name %> Background Image">
 	<div id="main" class="container-fluid">
 		<div class="col-sm-10 col-sm-offset-1 main">
 			<div class="row">
-				<h4 class="name col-sm-10"><%= link_to @city.name %></h4>
-					<button role="button" class="col-sm-2 text-right btn btn-primary btn-lg red-btn" data-toggle="modal" data-target="#newPostModal">Create New Post</button>
+				<h4 class="name col-sm-6"><%= link_to @city.name %></h4>
+				<% if current_user.present? %>
+				<button role="button" class="col-sm-6 text-right btn btn-primary btn-lg red-btn" data-toggle="modal" data-target="#newPostModal">Create New Post</button>
+				<% end %>
+			</div>			
+			<img class="banner-image col-sm-12" src="<%= @city.banner_image %>">
+			<div class="cities-posts col-sm-12">
+				<%= @post.each do |post| %>
+					<h1><%= post.title %></h1>
+					<h4><%= post.author %></h4>
+					<p><%= post.body %></p>
+				<% end %>
+				<%= render 'posts/new' %>
 			</div>
-				<img src="<%= @city.image %>">
 			</div>
 		</div>
 	</di>
-</body>
+
+</div>
+
 

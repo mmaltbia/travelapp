@@ -1,3 +1,118 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#profile {
+	padding:10px;
+	background-color: transparent;
+    color: black;
+    text-align: center;
+    width: 317px;
+    height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#profile-image {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+#profile2 {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    background: #f4f4f4;
+    width: 200px;
+    height: 200px;
+    line-height: 198px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#edit-pencil {
+	margin-left:10px;
+}
+#profile-post{
+	margin-right: auto;
+    color: white;
+    background-color: #DF0015;
+    border: none;
+    margin-top: 30px;
+    float: right;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    padding: 0px 10px;
+    font-family: 'Quicksand';
+    border-radius: 20px;
+    box-shadow: 1px 2px 2px 1px #111111;
+    margin-right: 20px;
+}
+.profile-text{
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	font-size: 18px;
+	font-style: bold;
+}
+#profile-edit {
+	font-family: Quicksand;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+    text-decoration: none !important;
+    width: auto;
+    box-shadow: 1px 2px 2px 1px #111111;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 13px;
+    height: 31px;
+    line-height: 29px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #fff;
+    background-color: #DF0015;
+    border-color: #DF0015;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF287BBC', endColorstr='#FF23639A');
+    background-image: -webkit-linear-gradient(top, #DF0015 0%,#DF0015 100%);
+    background-image: -moz-linear-gradient(top, #DF0015 0%,#DF0015 100%);
+    background-image: -o-linear-gradient(top, #DF0015 0%,#DF0015 100%);
+    background-image: linear-gradient(top, #DF0015 0%,#DF0015 100%);
+    white-space: nowrap;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    vertical-align: middle;
+}
+.profile-background {
+  font-family: 'Quicksand', sans-serif;
+  background: url('http://imgsrv.legends1027.com/image/wlgz/UserFiles/Image/Wiki%20Corner/golden%20gate%20bridge.jpg'); 
+  background-size: cover;
+  background-height:800px;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  height: 550px;
+  margin-top: -30px;
+}
+#city {
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	font-size: 24px;
+}
+.nav{
+	padding-top: 15px;
+	font-family: 'Quicksand';
+}
