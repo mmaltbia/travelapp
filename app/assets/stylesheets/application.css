@@ -18,10 +18,12 @@
 	border-radius: 0px;
 	border: none;
 	background-color: #fff;
+	z-index: 3;
 }
 
 .navbar-default .navbar-nav>li>a {
 	font-size: 18px;
+	z-index: 3;
 }
 
 #loginModal > div > div {

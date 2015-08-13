@@ -1,7 +1,7 @@
-<body class="posts">
+<!-- <body class="posts">
 <div id="background2" class="container-fluid">
 	<div class="col-sm-8 text-center col-sm-offset-2">
-		<div class="row animated fadeIn fade">
+		<div class="animated fadeIn fade">
 			<h4 id="city-name1"></h4><br>
 			<img id="profile-image2" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/08b/0a4/1e476e9.jpg" alt="Daniel Kahn">
 			<div id="post_content">
@@ -16,4 +16,26 @@
 			</div>
 		</div>
 	</div>
+</div> -->
+<div class="post-bg">
+<div class="container-fluid">
+	<div id="edit-btn">
+
+	</div>
+	<div id="content-div" class="row col-sm-8 col-sm-offset-2">
+		<!-- Button trigger modal -->
+		<button id="edit-post-btn" type="button" class="btn btn-primary btn-lg col-sm-offset-7" data-toggle="modal" data-target="#myModal">
+		  Edit Post
+		</button>
+		<div class="col-sm-3">
+		<img id="profile-image2" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/08b/0a4/1e476e9.jpg">
+		</div>
+		<div class="col-sm-9">
+			<h1><%= @post.title %></h1>
+			<h4><%= @post.city_id %></h4>
+			<h3><%= @post.author %></h3>
+			<p><%= @post.body %></p>
+		</div>
+	</div>
+</div>
 </div>
