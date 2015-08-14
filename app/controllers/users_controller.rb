@@ -36,7 +36,17 @@ class UsersController < ApplicationController
 
   # form to edit user details
   def edit
+    @user = User.find(params[:id])
   end
+
+  def update
+    @current_user = User.find(session[:user_id])
+    @user =  @current_user
+    if current_user.users.include? user
+      user.update_attributes(user_params)
+    end
+  end
+
   
   private
   def user_params

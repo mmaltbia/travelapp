@@ -37,6 +37,7 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     if current_user.posts.include? post
       post.update_attributes(post_params)
+      redirect_to post_path(post)
     else
       redirect_to profile_path
     end
@@ -44,7 +45,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.dest
+    @post.destroy
     redirect_to root_path
   end
 

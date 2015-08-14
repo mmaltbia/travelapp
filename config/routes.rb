@@ -10,7 +10,7 @@ end
 #user routes
 get '/signup', to: 'users#new'
 get '/profile', to: 'users#show'
-resources :users, only: [:create]
+resources :users, only: [:create, :edit, :update]
 
 #session routes
 get "/login", to: "sessions#new"

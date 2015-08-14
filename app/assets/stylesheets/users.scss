@@ -1,3 +1,43 @@
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+#user_city_id{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    height: 45px;
+}
+
+#current-city {
+    margin: 5px;
+}
+
+#signup-btn {
+    margin-right: auto;
+    color: white;
+    background-color: #ED1C24;
+    border: none;
+    float: right;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    padding: 0px 10px;
+    font-family: 'Quicksand';
+    border-radius: 4px;
+    margin-top: 18px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
+}
+
+.modal-body {
+    padding-bottom: 5em;
+}
+
 #profile {
 	padding:10px;
 	background-color: transparent;
@@ -8,6 +48,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 #profile-image {
 	height: 100%;
 	width: 100%;
@@ -16,7 +57,7 @@
 #profile2 {
     background-color: white;
     position: relative;
-    z-index: 1;
+    z-index: 4;
     background: #f4f4f4;
     width: 200px;
     height: 200px;
@@ -32,8 +73,23 @@
 #edit-pencil {
 	margin-left:10px;
 }
-#profile-post{
-	margin-right: auto;
+#edit-profile {
+    color: white;
+    background-color: #808080;
+    border: none;
+    float: center;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    padding: 0px 10px;
+    font-family: 'Quicksand';
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#profile-post {
+    margin-right: auto;
     color: white;
     background-color: #ED1C24;
     border: none;
@@ -92,17 +148,24 @@
     zoom: 1;
     vertical-align: middle;
 }
+
+#main_content > div.container-fluid.profile-background{
+    height: 400px;
+}
+
 .profile-background {
   font-family: 'Quicksand', sans-serif;
   background: url('http://imgsrv.legends1027.com/image/wlgz/UserFiles/Image/Wiki%20Corner/golden%20gate%20bridge.jpg'); 
   background-size: cover;
-  background-height:800px;
+  background-height:400px;
   background-repeat: no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  height: 550px;
+  height: 450px;
   margin-top: -30px;
+  margin-left: -25px;
+  margin-right: -25px;
 }
 #city {
 	font-family: 'Quicksand', sans-serif;
@@ -123,3 +186,15 @@
     }
 }
 
+#posts-area-title {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #808080;
+    margin-left: 25px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.post-list {
+    margin-left:30px;
+}

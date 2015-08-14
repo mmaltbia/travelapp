@@ -18,28 +18,30 @@
 	</div>
 	
 </div> -->
-<div class="post-bg">
-<div class="container-fluid">
-	<div id="content-div" class="row col-sm-8 col-sm-offset-2">
-		<div class="row col-sm-offset-9">
-			<!-- Button trigger modal -->
-			<button id="edit-post-btn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editPostModal">
-			  Edit Post
-			</button>
-			<%= render 'posts/edit' %>
-			<button id="delete-btn" type="button" class="btn btn-primary btn-lg">
-				<span class="glyphicon glyphicon-trash"></span>
-			</button>
-		</div>
-		<div class="col-sm-3">
-		<img id="profile-image2" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/08b/0a4/1e476e9.jpg">
-		</div>
-		<div class="col-sm-9">
-			<h1><%= @post.title %></h1>
-			<h4><%= @post.city_id %></h4>
-			<h3><%= @post.author %></h3>
-			<p><%= @post.body %></p>
+<%= render 'posts/edit' %>
+<div class="post">
+	<img id="bg-img" src="<%= City.find(@post.city_id).banner_image %>" alt="Background Image">
+	<div class="post-bg">
+		<div class="container-fluid">
+			<div id="content-div" class="row col-sm-8 col-sm-offset-2">
+				<div class="row col-sm-offset-9">
+					<!-- Button trigger modal -->
+					<button id="edit-post-btn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editPostModal">
+					  Edit Post
+					</button>
+					
+					<%= link_to "", @post, method: :delete, class: "glyphicon glyphicon-trash edit-post" %>
+				</div>
+				<div class="col-sm-3">
+				<img id="profile-image2" src="<%= City.find(@post.city_id).image %>">
+				</div>
+				<div class="col-sm-9">
+					<h1><%= @post.title %></h1>
+					<h3><%= @post.author %></h3>
+					<h4><%= City.find(@post.city_id).name %></h4>
+					<p><%= @post.body %></p>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 </div>
