@@ -20,7 +20,6 @@ class CitiesController < ApplicationController
   	render :index
   end
 
-<<<<<<< HEAD
 	  def show
 	  	city_id = params[:id]
 	  	@city = City.find_by(id: city_id)

@@ -26,6 +26,12 @@ div.post-bg{
 	z-index: 1;
 }
 
+#delete-btn {
+  background-color: #808080;
+  color: #fff;
+  margin-top: 1em;
+}
+
 #profile-image2 {
 	height: 125;
 	width: 125;
@@ -41,6 +47,7 @@ div.post-bg{
 #content-div {
 	background: rgba(255,255,255,0.9);
 	top: 8em;
+  padding-bottom: 15px;
 }
 
 #edit-post-btn {
@@ -59,7 +66,9 @@ background: url('city-post-background.jpg') no-repeat 50% 50% fixed;
   
 }
 
-
+.modal-backdrop {
+    z-index: 4;
+}
 
 #go-somewhere {
 	color: #fff;

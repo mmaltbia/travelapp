@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   # show current user 
   def show
   	@current_user = User.find(session[:user_id])
+    @posts = @current_user.posts
   	render :show
   end
 
