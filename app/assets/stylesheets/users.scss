@@ -35,7 +35,7 @@
 #profile-post{
 	margin-right: auto;
     color: white;
-    background-color: #DF0015;
+    background-color: #ED1C24;
     border: none;
     margin-top: 30px;
     float: right;
@@ -43,9 +43,11 @@
     font-size: 20px;
     padding: 0px 10px;
     font-family: 'Quicksand';
-    border-radius: 20px;
-    box-shadow: 1px 2px 2px 1px #111111;
+    border-radius: 4px;
     margin-right: 20px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .profile-text{
 	font-family: 'Quicksand', sans-serif;
@@ -62,8 +64,7 @@
     overflow: visible;
     text-decoration: none !important;
     width: auto;
-    box-shadow: 1px 2px 2px 1px #111111;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -111,5 +112,14 @@
 .nav{
 	padding-top: 15px;
 	font-family: 'Quicksand';
+}
+
+.city-image{
+    img{
+        position: relative;
+        left: 50px;
+        border-radius: 50px;
+        margin-bottom: 15px;
+    }
 }
 

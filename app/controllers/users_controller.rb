@@ -29,6 +29,8 @@ class UsersController < ApplicationController
   def show
   	@current_user = User.find(session[:user_id])
     @posts = @current_user.posts
+    @post = Post.new
+    @cities = City.all
   	render :show
   end
 

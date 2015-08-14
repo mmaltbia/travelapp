@@ -1,6 +1,6 @@
 <div class="profile-background">
-	<button id="profile-post">Create New Post
-			</button>
+	<button id="profile-post" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newPostModal">Create New Post</button>
+			<%= render 'posts/new' %>
 	<div id="profile">
 		<div id="profile2">
 			<img id="profile-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/08b/0a4/1e476e9.jpg" alt="Daniel Kahn">
@@ -16,13 +16,19 @@
 </div>
 
 <div class="container-fluid">
-	<div class="row">
 
 <% @posts.each do |post| %>
-	<div class="col-sm-3"><%= post.image</div>
-	<div class="col-sm-9"><h2><%= post.title %></h2></div>
-	<div class="col-sm-9"><p><%= post.body %></p></div>
+	<div class="row">
+		<div class="city-image col-sm-3">
+			<% @cities.each do |city| %>
+		      <% if city.id == post.city_id %>
+				<img src = <%= city.image %>>
+		      <% end %>
+			<% end %>
+		</div>
+		<div class="col-sm-9"><h2><%= post.title %></h2></div>
+		<div class="col-sm-9"><p><%= post.body %></p></div>
+	</div>
 <% end %>
 
 
-</div>
